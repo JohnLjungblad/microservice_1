@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "voaLDstxQpT/WuRzlGj1KDcZwgA8WMpr7kaIce7qcjQ=",
+  "Source": "microservice_1",
+  "BasePath": "_content/microservice_1",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
