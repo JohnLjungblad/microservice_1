@@ -9,20 +9,21 @@ using Microsoft.IdentityModel.Tokens;
 [Route("/api")]
 public class AuthController : ControllerBase
 {
+    private readonly MessageService messageService;
     private readonly SignInManager<IdentityUser> signInManager;
     private readonly UserManager<IdentityUser> userManager;
 
-    public AuthController(SignInManager<IdentityUser> signInManager, UserManager<IdentityUser> userManager)
+    public AuthController(SignInManager<IdentityUser> signInManager, UserManager<IdentityUser> userManager, MessageService messageService)
     {
         this.signInManager = signInManager;
         this.userManager = userManager;
+        this.messageService = messageService;
     }
-
     [HttpPost]
     [Route("/login")]
     public async Task<IActionResult> Login(LoginDto loginDto)
     {
-        //Find the user by email
+        //Find the user by username
         var user = await userManager.FindByNameAsync(loginDto.Username);
         if (user == null)
         {
@@ -35,6 +36,8 @@ public class AuthController : ControllerBase
         if (result.Succeeded)
         {
             var token = GenerateJwtToken(user.UserName);
+            messageService.ExportToken(token);
+            messageService.SendLoggingActions("User: " + user.UserName + " logged in");
             return Ok("User signed in " + new { token });
         }
         else if (result.IsLockedOut)
@@ -64,9 +67,7 @@ public class AuthController : ControllerBase
 
         var token = tokenHandler.CreateToken(tokenDescriptor);
         return tokenHandler.WriteToken(token);
-
     }
-
 }
 
 public class LoginDto

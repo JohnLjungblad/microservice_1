@@ -144,3 +144,4 @@ C:\Users\ljung\onedrive\skrivbord\skolacsharp\microservice_1\obj\Debug\net8.0\mi
 C:\Users\ljung\onedrive\skrivbord\skolacsharp\microservice_1\obj\Debug\net8.0\microservice_1.genruntimeconfig.cache
 C:\Users\ljung\onedrive\skrivbord\skolacsharp\microservice_1\obj\Debug\net8.0\ref\microservice_1.dll
 C:\Users\ljung\onedrive\skrivbord\skolacsharp\microservice_1\bin\Debug\net8.0\RabbitMQ.Client.dll
+C:\Users\ljung\onedrive\skrivbord\skolacsharp\microservice_1\obj\Debug\net8.0\microservice_1.sourcelink.json

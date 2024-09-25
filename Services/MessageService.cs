@@ -16,15 +16,31 @@ public class MessageService : IHostedService {
 
         // Skapa en exchange för att kunna skicka meddelanden
         // till andra microservices
-        channel.ExchangeDeclare("create-user", ExchangeType.Direct);
+        channel.ExchangeDeclare("create-user", ExchangeType.Fanout);
+        //Skapa exchange för token
+        channel.ExchangeDeclare("get-token", ExchangeType.Fanout);
     }
 
-    // Skicka ett meddelande till andra microservices
+    // Skicka ett meddelande till andra microservices om att en användare har skapats
     public void NotifyUserCreation(SendUserDto user) {
         var json = JsonSerializer.Serialize(user);
         var message = Encoding.UTF8.GetBytes(json);
 
         channel.BasicPublish("create-user", string.Empty, null, message);
+    }
+
+    //Metod för att skicka ut token till andra microservices vid inloggning
+    public void ExportToken(string token)
+    {
+        var message = Encoding.UTF8.GetBytes(token);
+        channel.BasicPublish("get-token", string.Empty, null, message);
+    }
+
+    //Logging
+    public void SendLoggingActions(string action)
+    {
+        var message = Encoding.UTF8.GetBytes(action);
+        channel.BasicPublish("logging", string.Empty, null, message);
     }
 
     // Anropas när programmet startas

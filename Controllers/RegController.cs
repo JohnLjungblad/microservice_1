@@ -8,10 +8,13 @@ public class RegController : ControllerBase
     private readonly AppDbContext database;
     private readonly UserManager<IdentityUser> userManager;
 
-    public RegController(AppDbContext database, UserManager<IdentityUser> userManager)
+    private readonly MessageService messageService;
+
+    public RegController(AppDbContext database, UserManager<IdentityUser> userManager, MessageService messageService)
     {
         this.database = database;
         this.userManager = userManager;
+        this.messageService = messageService;
     }
 
 
@@ -46,6 +49,8 @@ public class RegController : ControllerBase
 
         if (result.Succeeded)
         {
+            messageService.NotifyUserCreation(userInformation);
+            messageService.SendLoggingActions("User: " + user.UserName + " registered");
             return Ok("User registered!");
         }
         //If fail
