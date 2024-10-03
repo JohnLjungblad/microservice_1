@@ -10,7 +10,7 @@ public class MessageService : IHostedService {
 
     // Anslut till RabbitMQ
     public void Connect() {
-        var factory = new ConnectionFactory { HostName = "localhost" };
+        var factory = new ConnectionFactory { HostName = "10.104.114.61", Port = 5672 };
         connection = factory.CreateConnection();
         channel = connection.CreateModel();
 

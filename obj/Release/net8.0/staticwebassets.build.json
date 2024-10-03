@@ -1,8 +1,8 @@
 {
   "Version": 1,
-  "Hash": "voaLDstxQpT/WuRzlGj1KDcZwgA8WMpr7kaIce7qcjQ=",
-  "Source": "microservice_1",
-  "BasePath": "_content/microservice_1",
+  "Hash": "rBguz1leqB76tbAzsgryVandablnZzrTiWYvqzI++Q8=",
+  "Source": "login-microservice",
+  "BasePath": "_content/login-microservice",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],

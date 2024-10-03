@@ -5265,11 +5265,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ljung\\onedrive\\skrivbord\\skolacsharp\\microservice_1\\microservice_1.csproj",
-      "projectName": "microservice_1",
-      "projectPath": "C:\\Users\\ljung\\onedrive\\skrivbord\\skolacsharp\\microservice_1\\microservice_1.csproj",
+      "projectUniqueName": "C:\\Users\\ljung\\onedrive\\skrivbord\\skolacsharp\\login-microservice\\login-microservice.csproj",
+      "projectName": "login-microservice",
+      "projectPath": "C:\\Users\\ljung\\onedrive\\skrivbord\\skolacsharp\\login-microservice\\login-microservice.csproj",
       "packagesPath": "C:\\Users\\ljung\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ljung\\onedrive\\skrivbord\\skolacsharp\\microservice_1\\obj\\",
+      "outputPath": "C:\\Users\\ljung\\onedrive\\skrivbord\\skolacsharp\\login-microservice\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

@@ -4,9 +4,9 @@ metadata:
   name: login-service
 spec:
   selector:
-    app: login-microservice
+    app: login
   ports:
     - appProtocol: http
       protocol: TCP
-      port: 8080
+      port: 4000
       targetPort: 8080

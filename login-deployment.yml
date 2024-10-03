@@ -15,8 +15,19 @@ spec:
         app: login
     spec:
       containers:
+        - name: login-database
+          image: mcr.microsoft.com/mssql/server:2022-latest
+          ports:
+            - containerPort: 4000
+          env:
+            - name: ACCEPT_EULA
+              value: "Y"
+            - name: SA_PASSWORD
+              value: "Password123!"  # Change this to a strong password
+            - name: MSSQL_TCP_PORT
+              value: "4000"
         - name: login
-          image: docker.io/library/login_microservice:latest
+          image: docker.io/library/login-microservice:latest
           imagePullPolicy: Never
           ports:
-          - containerPort: 8080
+            - containerPort: 8080

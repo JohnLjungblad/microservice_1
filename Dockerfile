@@ -13,4 +13,4 @@ FROM mcr.microsoft.com/dotnet/aspnet:8.0
 WORKDIR /App
 COPY --from=build-env /App/out .
 EXPOSE 8080
-ENTRYPOINT ["dotnet", "microservice_1.dll"]
+ENTRYPOINT ["dotnet", "login-microservice.dll"]

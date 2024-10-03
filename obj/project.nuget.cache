@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "KlhCAfz3w+s=",
+  "dgSpecHash": "vjeqv3NfrI8=",
   "success": true,
-  "projectFilePath": "C:\\Users\\ljung\\onedrive\\skrivbord\\skolacsharp\\microservice_1\\microservice_1.csproj",
+  "projectFilePath": "C:\\Users\\ljung\\onedrive\\skrivbord\\skolacsharp\\login-microservice\\login-microservice.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ljung\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\ljung\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",
