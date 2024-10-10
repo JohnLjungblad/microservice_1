@@ -27,7 +27,42 @@ spec:
   - matches:
     - path:
         type: PathPrefix
+        value: /api/crash
+    backendRefs:
+    - name: login-service
+      port: 4000
+  - matches:
+    - path:
+        type: PathPrefix
         value: /register
     backendRefs:
     - name: login-service
       port: 4000
+  - matches:
+    - path:
+        type: PathPrefix
+        value: /api/getprofileinfo
+    backendRefs:
+    - name: profile-microservice
+      port: 4002
+  - matches:
+    - path:
+        type: PathPrefix
+        value: /api/listing
+    backendRefs:
+    - name: listing-microservice
+      port: 4004
+  - matches:
+    - path:
+        type: PathPrefix
+        value: /api/searchAd
+    backendRefs:
+    - name: search-microservice
+      port: 4005
+  - matches:
+    - path:
+        type: PathPrefix
+        value: /api/deletewithid
+    backendRefs:
+    - name: delete-microservice
+      port: 4006

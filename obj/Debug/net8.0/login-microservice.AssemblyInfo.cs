@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("login-microservice")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+722d852ce6e92b6e755e50fed58e00ae69cf974c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ae1afaba5177c7713668fd34974418fea3621db9")]
 [assembly: System.Reflection.AssemblyProductAttribute("login-microservice")]
 [assembly: System.Reflection.AssemblyTitleAttribute("login-microservice")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

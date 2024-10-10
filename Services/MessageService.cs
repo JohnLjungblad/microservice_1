@@ -17,6 +17,7 @@ public class MessageService : IHostedService {
         // Skapa en exchange för att kunna skicka meddelanden
         // till andra microservices
         channel.ExchangeDeclare("create-user", ExchangeType.Fanout);
+        channel.ExchangeDeclare("logging", ExchangeType.Fanout);
         //Skapa exchange för token
         channel.ExchangeDeclare("get-token", ExchangeType.Fanout);
     }
